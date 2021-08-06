@@ -11,4 +11,4 @@ I've made this project with a few sensors:
 
 This weather station is made it fully in Python. It also has 2 versions, the station.py saves all measures in a sql server, station_csv.py saves it in an archive called data.csv.
 
-This is a WIP project. I'm still developing and improving.
+Those measures will be added in a webpage and you'll be able to get it a telegram bot.
