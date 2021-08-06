@@ -12,3 +12,27 @@ I've made this project with a few sensors:
 This weather station is made it fully in Python. It also has 2 versions, the station.py saves all measures in a sql server, station_csv.py saves it in an archive called data.csv.
 
 Those measures will be added in a webpage and you'll be able to get it a telegram bot.
+
+
+/SQL_Archives Folder:
+
+It helps you to make a create the database that i'm using to commit measures in the SQL server, if you want use a csv file, you can ignore this folder.
+
+Steps to make this database.
+
+Install the mysql.connector from the internet with this command:
+
+pip install mysql-connector-python
+
+Then you can import this python module as:
+
+import mysql.connector
+
+Once you have installed this module. Run this scripts in this order:
+
+1.- createdatabase.py -> This Make a SQL database called weather
+
+2.- createtable.py -> This make a Table called data inside the weather database
+
+3.- insertdata.py -> This file is not neccesary because it is running into station.py, it's just the code you need to import any code in the table created before.
+
