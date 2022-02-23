@@ -1,31 +1,29 @@
-Welcome! This is a little log of changes in my raspberry pi meteorological station. For questions contact me at marcialbarajas[at]gmail.com
+Welcome! This is a little log of changes in my raspberry pi meteorological station.
 
+For questions contact me at marcialbarajas[at]gmail.com
 
 Version 0.1
 
-First of all, for this station we have the following devices running:
+First, for this station it has the following devices running:
 
--> Temperature: Ds18b20 Thermometer wiring into a protoboard in the connector gpio4.
+-> Temperature: Ds18b20 Thermometer wiring into a breadboard in the connector gpio4.
 
--> Pressure: Adafruit BMP085. The most cheapest pressure sensor, i had installed a BME280 but it doesn't running on it. i have to check it again.
+-> Pressure: Adafruit BMP085. The most cheap pressure sensor, i had installed a BME280 but it doesn't running on it. i have to check it again.
  It is wired in the gpio2 (SDA) and gpio3(SCL)
-
 
 -> Humidity and Altitude: DHT11 sensor, Cheap and efficient module. it is wired into Gpio14 port.
 
--> Rain meter: A3-WH-SP-RG rain meter. Is a professional Rain meter with 0.2974mm bucket capacity, it is wired in the gpio6 (pin 31)
+-> Rain meter: A3-WH-SP-RG rain meter. Is a professional Rain meter with 0.2974 mm bucket capacity, it is wired in the gpio6 (pin 31)
 
--> Anemometer: A3-WH-SP-WS01 anemometer. Same as the Rainmeter. It has 9 cm. radio, is wired in the gpio5 (pin 29)
-
-
+-> Anemometer: A3-WH-SP-WS01 anemometer. Same as the Rainmeter. It has 9 cm. radius, is wired in the gpio5 (pin 29)
 
 Version 0.2
 
 Fixed some bugs in the script which it was doing annoying crashes. Ported Ds18b20 as a module instead a script
 
-Version 0.3 
+Version 0.3
 
-Fixed DHT11 problems around the wire connection. Added anemometer to the script but still not running
+Fixed DHT11 problems around the wire connection. Added the anemometer to the script but still not running
 
 Version 0.4
 
@@ -33,12 +31,16 @@ Added MariaDB to the script, now it is running and saving records on temperature
 
 Version 0.5
 
-Added Rainmeter to the script. MariaDB now saves records on wind too.
+Added Rainmeter to the script. MariaDB now saves records for Rainmeter and Wind measures.
 
-Version 0.6 
+Version 0.6
 
-Fixed minor bugs, Rainmeter is not saving data correctly
+Fixed minor bugs, Rainmeter was not saving data correctly.
 
 Version 0.7
 
-All is running! Still have to fix some code but it works correctly.
+All is running! Still have to improve some code, but it works correctly.
+
+Version 0.8
+
+Added Telebot (pyTelegramBotAPI, from eternnoir) module for send messages every time interval, those messages send the measure of Temperature, Humidity, Pressure, Wind measure and Rain measures.
