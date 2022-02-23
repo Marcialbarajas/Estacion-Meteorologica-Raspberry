@@ -43,4 +43,4 @@ All is running! Still have to improve some code, but it works correctly.
 
 Version 0.8
 
-Added Telebot (pyTelegramBotAPI, from eternnoir) module for send messages every time interval, those messages send the measure of Temperature, Humidity, Pressure, Wind measure and Rain measures.
+Added Telebot (pyTelegramBotAPI, from eternnoir) module for send messages every time interval, those messages send the measure of Temperature, Humidity, Pressure, Wind measure and Rain measures. 
