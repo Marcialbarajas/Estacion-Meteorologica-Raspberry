@@ -1,38 +1,43 @@
 # Weather-Station
-Useful Weather station made in Raspberry pi and programmed in Python
 
-I've made this project with a few sensors:
+Estación meteorológica funcional montada en Raspberry Pi y programada en Python.
 
-- ds18b20 Thermometer: A cheap hardware to measure temperatures.
-- DHT11 Sensor: A Humidity + thermometer: I use it to measure humidity, in a future version i'd use this thermometer to measure the ground temperature.
-- BMP180 Pressure module: It measures temperature, pressure and altitude, i used it mainly to measure pressure and altitude.
-- WH-SP-WS01: An anemometer to measure wind speed.
-- WH-SP-RG: A Rainmeter to measure Rainfall.
+He hecho este proyecto con los siguientes sensores:
 
-This weather station is made it fully in Python. It also has 2 versions, the station.py saves all measures in a sql server, station_csv.py saves it in an archive called data.csv.
+- Ds18b20 Thermometer: Termómetro simple para medir temperatura del aire.
+- 
+- DHT11 Sensor: Sensor que mide humedad y temperatura: Usado para medir humedad, en un futuro el termómetro que viene podría ser incluido para medir la temperatura del suelo.
+- 
+- BMP180 Módulo de Presión: Este módulo mide presión, temperatura y altitud, para este proyecto es usado para medir presión y altitud (aunque se mantenga constante).
+- 
+- WH-SP-WS01: Anemómetro para medir la velocidad del viento.
+- WH-SP-RG: Un pluviómetro para medir la cantidad de precipitación.
 
-Those measures will be added on a webpage and you'll be able to get the measurements in a telegram bot.
+Esta estación meteorológica está hecha casi al completo en Python, también tiene dos versiones: 
+-El fichero station.py guarda las medidas en un servidor local sql
+-El fichero station_csv.py guarda las medidas en un archivo llamado data.csv
+
+Las medidas tomadas serán añadidas a una página web y será posible recibir notificaciones vía telegram
 
 
-/SQL_Archives Folder:
+Carpeta de archivos SQL:
 
-It helps you to make a create the database that i'm using to commit measures in the SQL server, if you want use a csv file, you can ignore this folder.
+Esto ayuda a crear una base de datos tal y como la que se está usando para añadir las medidas en el servidor SQL local, aunque si se desea usar el fichero .csv, ignora esta carpeta.
 
-Steps to make this database.
+Pasos para crerar esta base de datos:
 
-Install the mysql.connector from the internet with this command:
+-Instala el módulo de Python mysql.connector desde internet con este comando para python:
 
-pip install mysql-connector-python
+- pip install mysql-connector-python
 
-Then you can import this python module as:
+Entonces ya se podrá importar el módulo de Python como:
 
 import mysql.connector
 
-Once you have installed this module. Run this scripts in this order:
+Una vez que tengas instalado este módulo, corre estos scripts en este orden:
 
-1.- createdatabase.py -> This Make a SQL database called weather
+1.- createdatabase.py -> Hace una base de datos SQL llamada weather
 
-2.- createtable.py -> This make a Table called data inside the weather database
+2.- createtable.py -> Hace una tabla llamada data dentro de la base de datos weather
 
-3.- insertdata.py -> This file is not neccesary because it is running into station.py, it's just the code you need to import any code in the table created before.
-
+3.- insertdata.py -> Este fichero no es necesario porque está dentro del archivo station.py, es solo el código que se necesita para importar cualquier dato en la tabla creada anteriormente.
